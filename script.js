@@ -898,7 +898,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- NOUVELLE FONCTION POUR COPIER DANS LE PRESSE-PAPIERS ---
-    function copyToClipboard(text) {
+ /*    function copyToClipboard(text) {
         if (navigator.clipboard) { // API moderne et sécurisée
             navigator.clipboard.writeText(text).then(() => {
                 showNotification('✅ Commande copiée ! Colle-la dans le chat.');
@@ -923,7 +923,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.removeChild(textArea);
         }
     }
-
+ */
     // --- GESTION DES ÉVÉNEMENTS ---
 
     // Clics sur la barre de navigation
@@ -965,7 +965,6 @@ document.addEventListener('DOMContentLoaded', function () {
             let message = formatOrderMessage();
             message = message.replace(/\*/g, '');
 
-            copyToClipboard(message);
 
             // --- AJOUT : Inverser les styles des boutons ---
             const copyBtn = document.getElementById('copy-order-btn');
@@ -1162,21 +1161,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Clic sur "Confirmer la commande" (VERSION COPIER/COLLER - LA SEULE FIABLE)
         if (target.closest('#confirm-order-button')) {
-
-            const targetPotatoUser = 'BPDiSPENSARY';
-
-            // 1. C'est le lien de profil qui MARCHE (vu dans ta vidéo)
-            const potatoUrl = `https://dympt.org/${targetPotatoUser}`;
+            
+            // 1. TON PSEUDO TELEGRAM
+            const targetUsername = 'plugsBotOfficiel'; 
 
             // 2. On prépare le message
             let message = formatOrderMessage();
-            message = message.replace(/\*/g, '');
+            message = message.replace(/\*/g, ''); // On nettoie
 
-            // 3. On copie le message dans le presse-papiers
-            copyToClipboard(message);
+            // 3. (Optionnel mais cool) On copie quand même dans le presse-papier en backup
+            // copyToClipboard(message);
 
-            // 4. On ouvre le lien du PROFIL (qui, on le sait, marche)
-            tg.openLink(potatoUrl);
+            // 4. On encode et on ouvre le lien
+            const encodedMessage = encodeURIComponent(message);
+            const telegramUrl = `https://t.me/${targetUsername}?text=${encodedMessage}`;
+            
+            tg.openLink(telegramUrl);
         }
 
     });
