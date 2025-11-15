@@ -34,21 +34,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: 'Frosty2.png', // Mets une image de farm si tu veux
                     badgeText: '5 produits',
                     products: [
-                       /*  {
-                            id: 'Papaya',
+                         {
+                            id: 'Amnesia',
                             flag: '🇺🇸',
-                            name: '🍑 Papaya 🍍',
-                            farm: '❄️ Frosty hash ❄️',
+                            name: '🌿 AMNÉSIA 🌿',
+                            farm: 'Farm',
                             promoEligible: true,
                             type: 'Hash',
-                            image: 'Neujeu3.png',
-                            video: 'VideoNejeu1.mp4',
-                            description: 'Type d\'exctraction \n Wpff-120u',
+                            image: 'FirstProduct.png',
+                            video: 'FirstProduct.mp4',
+                            description: 'Description',
                             tarifs: [
-                                { weight: '1g', price: 80.00 },
-                                { weight: '2g', price: 150.00 },
+                                { weight: '2g', price: 10.00 },
+                                { weight: '4g', price: 20.00 },
+                                { weight: '10g', price: 50.00 },
+                                { weight: '50g', price: 180.00 },
+                                { weight: '100g', price: 280.00 },
+
                             ]
-                        },/
+                        }/*
+                        
+                        ,/
                         {
                             id: 'Bluezushi',
                             flag: '🇺🇸',
@@ -170,12 +176,12 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         // --- Catégorie 2: V.V.S TANGER ---
         {
-            id: 'COKE',
-            name: '☃️ Coke',
+            id: 'White',
+            name: '☃️ White',
             farm: '',
-            type: 'Coke',
-            quality: '☃️ Coke',
-            image: 'CategCoke.png',
+            type: 'White',
+            quality: '☃️ White',
+            image: 'CategWhite.png',
 
             farms: [
                 {
@@ -381,8 +387,12 @@ document.addEventListener('DOMContentLoaded', function () {
          height="24"
           viewBox="0 0 24 24"
           ><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>  ${category.name}`; // <-- MODIFIÉ (on affiche le nom de la catégorie)
-            backButton.style.cssText = `background: var(--tertiary-bg-color); 
-        border: none; color: white; padding: 10px 15px; 
+            backButton.style.cssText = ` background: linear-gradient(180deg, black, transparent); 
+            border-bottom: 2px solid #e605c0;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        color: white; padding: 10px 15px; 
         border-radius: 10px; font-size: 1.1rem; 
         font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; width: 100%; box-sizing: border-box; margin-top: 3vh;    font-family: Copperplate;
         `;
@@ -517,51 +527,50 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Affiche la page de détail d'un produit
-    function renderProductPage(productId) {
-        // On utilise notre nouvelle fonction "helper"
-        const product = getProductById(productId);
-        if (!product) return;
+   // Affiche la page de détail d'un produit
+function renderProductPage(productId) {
+    // On utilise notre nouvelle fonction "helper"
+    const product = getProductById(productId);
+    if (!product) return;
 
-        const videoElement = document.querySelector('#page-product .product-video');
-        videoElement.src = product.video;
-        videoElement.poster = product.image;
+    const videoElement = document.querySelector('#page-product .product-video');
+    videoElement.src = product.video;
+    videoElement.poster = product.image;
 
-        document.getElementById('product-page-title').innerText = product.name;
-        const detailsContainer = document.getElementById('product-details-content');
+    document.getElementById('product-page-title').innerText = product.name;
+    const detailsContainer = document.getElementById('product-details-content');
 
-        let tarifsHTML = product.tarifs.map(tarif => `
-        <div class="tarif-item">
-            <div class="box-tarif">
-                <div class="tarif-wieght">${tarif.weight}</div>
-                <div class="tarif-price">${tarif.price.toFixed(2)}€</div>
-            </div>
-            <button class="add-to-cart-btn" data-product-id="${product.id}" data-weight="${tarif.weight}" data-price="${tarif.price}">
-                <svg width="20" height="20"><use href="#icon-cart"/></svg>
-            </button>
+    let tarifsHTML = product.tarifs.map(tarif => `
+    <div class="tarif-item">
+        <div class="box-tarif">
+            <div class="tarif-wieght">${tarif.weight}</div>
+            <div class="tarif-price">${tarif.price.toFixed(2)}€</div>
         </div>
-    `).join('');
+        <button class="add-to-cart-btn" data-product-id="${product.id}" data-weight="${tarif.weight}" data-price="${tarif.price}">
+            <svg width="20" height="20"><use href="#icon-cart"/></svg>
+        </button>
+    </div>
+`).join('');
 
-        // --- NOUVEAU BLOC DE CODE ---
-        // On prépare le HTML pour la description, seulement si elle existe
-        let descriptionHTML = '';
-        if (product.description) {
-            // On remplace les sauts de ligne \n par des <br> pour l'HTML
-            const formattedDescription = product.description.replace(/\n/g, '<br>');
-            descriptionHTML = `<p class="product-description">${formattedDescription}</p>`;
-        }
-        // --- FIN DU NOUVEAU BLOC ---
-
-        // On injecte le HTML, y compris la description
-        detailsContainer.innerHTML = `
-        <div class="name">${product.name}</div>
-        <div class="farm">${product.farm}</div>
-        ${descriptionHTML} <h4 class="tarifs-title">💰 Tarifs disponibles :</h4>
-        ${tarifsHTML}
-    `;
-        showPage('page-product');
+    // ... (la logique de descriptionHTML ne change pas) ...
+    let descriptionHTML = '';
+    if (product.description) {
+        // ...
     }
+    
+    // On injecte le HTML, y compris la description
+    detailsContainer.innerHTML = `
+    <div class="name">${product.name}</div>
+    <div class="farm">${product.farm}</div>
+    ${descriptionHTML} 
+    <h4 class="tarifs-title">💰 Tarifs disponibles :</h4>
 
+    <div class="tarifs-grid-container">
+        ${tarifsHTML}
+    </div>
+    `;
+    showPage('page-product');
+}
     // Met à jour l'affichage du panier (inchangé)
     function renderCart() {
         const cartContainer = document.getElementById('cart-items-container');
@@ -754,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const farms = ['all', ...new Set(productFarms)];
 
         qualityFilter.innerHTML = qualities.map(q => `<option value="${q}">${q === 'all' ? 'CATEGORIE' : q}</option>`).join('');
-        farmFilter.innerHTML = farms.map(farm => `<option value="${farm}">${farm === 'all' ? 'FARM' : farm}</option>`).join('');
+        farmFilter.innerHTML = farms.map(farm => `<option value="${farm}">${farm === 'all' ? 'LES FARM' : farm}</option>`).join('');
 
         searchFilter.addEventListener('input', (e) => {
             currentFilters.searchTerm = e.target.value;

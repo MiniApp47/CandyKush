@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>BackPackBot</title>
+    <title>CandyKush73</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -63,7 +63,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: var(--secondary-bg-color);
+            background: linear-gradient(#012e5129, transparent);
+            height: 6vh;
         }
 
         .page-header .title {
@@ -102,9 +103,15 @@
         }
 
         #page-loader .loader-box {
-            background: var(--secondary-bg-color);
+            background: #0a5fa129;
             padding: 30px;
             border-radius: 20px;
+            height: 25vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #e605c0;
         }
 
         #page-loader img {
@@ -117,19 +124,21 @@
         #page-loader .app-name {
             font-size: 1.5rem;
             font-weight: 700;
-/*             font-family: Chalkduster, fantasy;
- */        }
+            /*             font-family: Chalkduster, fantasy;
+ */
+        }
 
         #page-loader .loading-text {
             color: var(--hint-color);
             margin-top: 10px;
-/*             font-family: URW Chancery L, cursive;
- */        }
+            /*             font-family: URW Chancery L, cursive;
+ */
+        }
 
         /* --- Page d'accueil --- */
         .top-marquee {
             background-color: var(--tertiary-bg-color);
-            color: #f7e164;
+            color: #e605c0;
             padding: 8px 0;
             overflow: hidden;
             font-weight: 500;
@@ -166,7 +175,7 @@
             justify-content: flex-end;
             align-items: center;
             padding: 10px 15px;
-            background-color: #2c2c2ea1;
+            background: linear-gradient(#012e5185, transparent);
             position: relative;
             height: 11vh;
         }
@@ -178,7 +187,7 @@
             transform: translate(-50%, -50%);
             height: 14vh;
             border-radius: 50%;
-            box-shadow: 0px 0px 10px 2px #f4d538;
+            box-shadow: 0px 0px 10px 2px #e605c0;
         }
 
         #page-home .cart-button {
@@ -194,7 +203,7 @@
             /* MODIFIÉ pour l'afficher */
             align-items: center;
             justify-content: center;
-            box-shadow: 0px 0px 10px 2px #f9dd5d;
+            box-shadow: 0px 0px 10px 2px #e605c0;
         }
 
         #quality-filter {
@@ -203,10 +212,11 @@
  */
             height: 7vh;
             font-size: 1.8vh;
-          /*    margin-left: 8vh;
+            /*    margin-left: 8vh;
              border-left: 1px solid grey; */
             width: 100%;
             text-align: center;
+    background: linear-gradient(45deg, black, transparent);
         }
 
         #quality-filter option {
@@ -260,7 +270,7 @@
             position: absolute;
             top: -5px;
             right: -5px;
-            background: #ff6000;
+            background: #e81e9d;
             color: white;
             border-radius: 50%;
             font-size: 0.7rem;
@@ -278,6 +288,8 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            justify-content: center;
+            align-items: center;
         }
 
         .filter-input-wrapper,
@@ -289,6 +301,8 @@
             border-radius: 10px;
             margin-top: 3vh;
             justify-content: center;
+            border-radius: 20px;
+            width: 80%;
         }
 
         .filter-select-wrapper::after {
@@ -304,25 +318,25 @@
 
         .filter-input-wrapper input,
         .filter-select-wrapper select {
-
             padding-top: 15px;
             padding-bottom: 15px;
-            padding-left: 50px;
+            padding-left: 4vh;
             padding-right: 40px;
             border: none;
-            background: transparent;
             color: var(--text-color);
             font-size: 1rem;
             appearance: none;
             -webkit-appearance: none;
-
-            /* --- AJOUTS POUR iOS --- */
             border-radius: 0;
             line-height: normal;
             height: auto;
             position: relative;
             z-index: 1;
             width: 100%;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #e605c0;
+    background: linear-gradient(45deg, black, transparent);
         }
 
         .filter-input-wrapper input::placeholder {
@@ -352,11 +366,12 @@
         }
 
         .product-card {
-            background: var(--secondary-bg-color);
             border-radius: 15px;
             overflow: hidden;
             cursor: pointer;
             position: relative;
+            border: 2px solid #774364;
+            background: linear-gradient(#3d203c, #4a303a);
         }
 
         .card-badge {
@@ -452,15 +467,15 @@
             border-radius: 20px;
             /* height: 5vh; */
             width: 12vh;
-            color: #f4d538;
-            padding: 1vh;
-            border: none;
-            box-shadow: 0px 0px 10px 2px #f4d538;
-            cursor: pointer;
+            color: #6402ff;
+    padding: 1vh;
+    border: none;
+    box-shadow: 0px 0px 10px 2px #e605c0;
+    cursor: pointer;
         }
 
         .nav-item.active {
-            color: #d67f00;
+            color: #ff85ea;
             background-color: #0000009c;
         }
 
@@ -475,6 +490,7 @@
             margin: auto;
             aspect-ratio: 9 / 16;
             background: #000;
+            border-radius: 20px;
         }
 
         #page-product .product-details {
@@ -488,7 +504,7 @@
         }
 
         .product-details .farm {
-            color: #ff0000;
+            color: #ff1dd4;
         }
 
         .product-details .tarifs-title {
@@ -507,14 +523,17 @@
         }
 
         .add-to-cart-btn {
-            background: #a05325;
-            border: 1px solid white;
+            background: linear-gradient(black, transparent);
+            border: 1px solid #ff00d6fc;
             border-radius: 8px;
-            color: white;
-            width: 35px;
-            height: 35px;
+            color: #ff00d6fc;
+            width: 50%;
+            height: 5vh;
             cursor: pointer;
             display: flex;
+            align-items: center;
+            margin-top: 1vh;
+            justify-content: center;
             align-items: center;
         }
 
@@ -560,7 +579,7 @@
         }
 
         .cart-item .price {
-            color: #e6683c;
+            color: #cc36b2;
             font-weight: 700;
             margin-bottom: 1vh;
         }
@@ -586,7 +605,7 @@
         }
 
         .cart-summary {
-            background: #ffc624b0;
+            background: #8b1476a6;
             color: white;
             padding: 15px;
             border-radius: 10px;
@@ -630,7 +649,7 @@
         }
 
         .main-action-btn {
-            background: #ffbe2a9e;
+            background: #8b1476;
             color: white;
             padding: 15px;
             border-radius: 10px;
@@ -717,8 +736,8 @@
             display: flex;
             justify-content: center;
             border-radius: 20px;
-            background: linear-gradient(#ff000087, #ff390054);
-            border: 2px solid white;
+            background: linear-gradient(#3d203c, #4a303a);
+            border: 2px solid #ff00d62e;
             width: 90%;
             height: 4vh;
         }
@@ -728,7 +747,7 @@
             visibility: hidden;
             /* Caché par défaut */
             min-width: 250px;
-            background-color: #490100c9;
+            background-color:#3f223c;
             color: #fff;
             text-align: center;
             border-radius: 10px;
@@ -785,9 +804,30 @@
             display: flex;
             font-size: 30px;
             justify-content: space-around;
-            width: 80%;
+            width: 90%;
             font-family: Impact, fantasy;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
+
+        .box-tarif .tarif-wieght {
+            border-bottom: 1px solid grey;
+            width: 80%;
+            text-align: center;
+            /* margin-bottom: 1vh; */
+            height: 3.5vh;
+        }
+
+        .box-tarif .tarif-price {
+            border-bottom: 1px solid grey;
+            width: 80%;
+            text-align: center;
+            /* margin-bottom: 1vh; */
+            height: 3.5vh;
+            margin-top: 1vh;
+        }
+
 
         /* --- NOUVEAU STYLE POUR LA PAGE INFO --- */
         #page-info .page-content {
@@ -838,7 +878,7 @@
             width: 15vh;
             margin-bottom: 6vh;
             border-radius: 25%;
-    box-shadow: 0px 0px 10px 2px #ffe133;
+            box-shadow: 0px 0px 10px 2px #ffe133;
             margin-top: 2vh;
         }
 
@@ -1105,10 +1145,59 @@
             opacity: 0.7;
         }
 
-        #nav-info{
+        #nav-info {
             display: none;
         }
 
+        /* --- NOUVEAU STYLE POUR LA GRILLE DES TARIFS --- */
+
+        .tarifs-grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            width: 90%;
+        }
+
+        /* On force les .tarif-item à s'adapter à la grille */
+        #page-product .tarifs-grid-container .tarif-item {
+            /* On veut 2 par ligne, avec 10px de gap.
+       (100% - 10px) / 2 = 50% - 5px */
+            width: calc(50% - 5px);
+            margin-top: 0;
+            box-sizing: border-box;
+            height: 20vh;
+            min-height: 4vh;
+            padding: 10px 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* On ajuste la police si ça déborde sur mobile */
+        #page-product .tarifs-grid-container .box-tarif {
+            font-size: 22px;
+            /* Un peu plus petit pour que ça rentre */
+            /* Le reste (width: 80%, etc.) est ok */
+        }
+
+        #page-product .tarifs-grid-container .add-to-cart-btn {
+            /* On s'assure que le bouton 'panier' ne prend pas trop de place */
+            flex-shrink: 0;
+        }
+
+        .filter-select-wrapper:has(#quality-filter) {
+            /* C'est ici que tu mets le style de ton image */
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--secondary-bg-color);
+            margin-top: 3vh;
+            justify-content: center;
+
+            /* Les lignes de ton image : */
+            border-radius: 20px;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -1338,7 +1427,7 @@
                 <input type="text" id="search-filter" placeholder="Rechercher un produit...">
             </div>
             <div class="filter-select-wrapper">
-               <!--  <svg width="20" height="20">
+                <!--  <svg width="20" height="20">
                     <use href="#icon-quality" />
                 </svg> -->
                 <select id="quality-filter"></select>
