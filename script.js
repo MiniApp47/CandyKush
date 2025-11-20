@@ -8,12 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // --- CONFIGURATION DES LIENS DE CONTACT ---
     const contactLinks = [
-    { name: 'WhatsApp', url: 'https://wa.me/xxxxxxxxxx', icon: '#icon-whatsapp', id: 'whatsapp' ,className: 'whatsapp', text: "WhatsApp"},
-    { name: 'Instagram', url: 'https://www.instagram.com/plugsbot?igsh=MTYzamtyZ2JpNHJpOQ%3D%3D&utm_source=qr', className: 'instagram', text: "Instagram" ,icon: '#icon-instagram', id: 'instagram' },
-    { name: 'Snapchat', url: 'https://snapchat.com/add/user', icon: '#icon-snapchat', id: 'snapchat', className: 'snapchat' , text: "Snapchat"},
-    { name: 'Telegram', url: 'https://t.me/PlugsBotOfficielBot', icon: '#icon-telegram', id: 'telegram',className: 'telegram', text: "Telegram" },
-    { name: 'Potato', url: 'https://m.potato.im', icon: '#icon-potato', id: 'potato', className: 'potato', text: "Potato"}
-    ];
+    { name: 'WhatsApp', url: 'https://wa.me/33758626677', icon: '#icon-whatsapp', id: 'whatsapp' ,className: 'whatsapp', text: "WhatsApp"},
+    { name: 'Snapchat', url: 'https://www.snapchat.com/@ckush731?locale=fr-FR&share_id=BsJIDrpIOaQ', icon: '#icon-snapchat', id: 'snapchat', className: 'snapchat' , text: "Snapchat"},
+    { name: 'Telegram', url: 'https://t.me/+8sCHftv9LF1kZWZk', icon: '#icon-telegram', id: 'telegram',className: 'telegram', text: "Telegram" },
+    { name: 'Signal', url: 'https://signal.me/#eu/dd_ukQSEetkqH6i_rhDQpjg6MBEPo-32cX6zpd3VHDPLSHdQYRVJw5ODNbilKXYF', icon: '#icon-signal', id: 'signal', className: 'signal', text: "Signal" }
+];
 
     // --- DONNÉES DE L'APPLICATION (NOUVELLE STRUCTURE) ---
     const appData = [
@@ -1172,7 +1171,7 @@ function renderProductPage(productId) {
         if (target.closest('#confirm-order-button')) {
             
             // 1. TON PSEUDO TELEGRAM
-            const targetUsername = 'plugsBotOfficiel'; 
+            const targetUsername = 'Candycentrale73'; 
 
             // 2. On prépare le message
             let message = formatOrderMessage();
