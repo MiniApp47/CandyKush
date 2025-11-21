@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
                          {
                             id: 'WaterMelon Frutti',
                            //  flag: '🇺🇸',
-                            name: '🍉 WaterMelon Frutti 🍉',
+                            name: '🍉 WaterMelon \n Frutti 🍉',
                             farm: '',
                             promoEligible: true,
                             type: 'Hash',
