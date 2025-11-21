@@ -28,27 +28,27 @@ document.addEventListener('DOMContentLoaded', function () {
             // La catégorie contient maintenant des "farms"
             farms: [
                 {
-                    id: 'FROSTYHASH',
-                    name: 'Frosty hash ❄️',
+                /*     id: 'HASH',
+                    name: 'HASH',
                     image: 'Frosty2.png', // Mets une image de farm si tu veux
-                    badgeText: '5 produits',
+                    badgeText: '5 produits', */
                     products: [
                          {
-                            id: 'Amnesia',
-                            flag: '🇺🇸',
-                            name: '🌿 AMNÉSIA 🌿',
-                            farm: 'Farm',
+                            id: 'WaterMelon Frutti',
+                           //  flag: '🇺🇸',
+                            name: '🍉 WaterMelon Frutti 🍉',
+                            farm: '',
                             promoEligible: true,
                             type: 'Hash',
-                            image: 'FirstProduct.png',
-                            video: 'FirstProduct.mp4',
-                            description: 'Description',
+                            image: 'WaterProduct.png',
+                            video: 'Watermelon.mp4',
+                            description: 'Nouvelle récolte de mousse super odeur pue la frappe rien à dire la qualité au rdv 🥇',
                             tarifs: [
-                                { weight: '2g', price: 10.00 },
                                 { weight: '4g', price: 20.00 },
                                 { weight: '10g', price: 50.00 },
+                                { weight: '25g', price: 100.00 },
                                 { weight: '50g', price: 180.00 },
-                                { weight: '100g', price: 280.00 },
+                                { weight: '100g', price: 290.00 },
 
                             ]
                         }/*
@@ -137,22 +137,25 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: 'Wizard4.png', // Mets une image de farm si tu veux
                     badgeText: '2 produits', */
                     products: [
-                        /* {
-                            id: 'ZangBanger',
-                            flag: '🇺🇸',
-                            name: '🍇 Zang Banger 🌪',
-                            farm: '🔮 Wizard trees 🔮',
+                        {
+                            id: 'LEMONHAZE',
+                           //flag: '🇺🇸',
+                            name: '🍋 LEMON HAZE 🍋',
+                            farm: '',
                             promoEligible: true,
                             type: 'Weed',
-                            image: 'ZangBangerProduct.jpg',
-                            video: 'VideoCali2.mp4',
-                            description: 'Ultra rare - 27.33% THC \n ( Sherbanger #22 x Zangria )',
+                            image: 'LemonProduct.png',
+                            video: 'LemonHaze.mp4',
+                            description: 'Beuh Hollandaise craquante et poleneuse sans super fort a super bon goût à la bouche 🤪',
                             tarifs: [
-                                { weight: '3,5g', price: 130.00 },
-                                { weight: '7g', price: 250.00 },
-                                { weight: '10,5g', price: 350.00 },
+                                { weight: '2g', price: 20.00 },
+                                { weight: '5g', price: 50.00 },
+                                { weight: '10g', price: 80.00 },
+                                { weight: '25g', price: 160.00 },
+                                { weight: '50g', price: 300.00 },
+                                { weight: '100g', price: 550.00 },
                             ]
-                        },
+                        } /*,
                         {
                             id: 'Potion',
                             flag: '🇺🇸',
