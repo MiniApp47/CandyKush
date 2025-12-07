@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         // --- Catégorie 2: V.V.S TANGER ---
-        {
+        /* {
             id: 'White',
             name: '☃️ White',
             farm: '',
@@ -191,44 +191,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     name: 'Wizard trees 🔮',
                     image: 'CategHash.png', 
                     badgeText: '0 produits',
-                    clickable: false,  */
-                    products: [
+                    clickable: false,  
 
-                      /*   {
-                            id: 'ZangBanger',
-                            flag: '🇺🇸',
-                            name: '🍇 Zang Banger 🌪',
-                            farm: '🔮 Wizard trees 🔮',
-                            promoEligible: true,
-                            type: 'Weed',
-                            image: 'ZangBangerProduct.jpg',
-                            video: 'VideoCali2.mp4',
-                            description: 'Ultra rare - 27.33% THC \n ( Sherbanger #22 x Zangria )',
-                            tarifs: [
-                                { weight: '3,5g', price: 130.00 },
-                                { weight: '7g', price: 250.00 },
-                                { weight: '10,5g', price: 350.00 },
-                            ]
-                        },
-                        {
-                            id: 'Potion',
-                            flag: '🇺🇸',
-                            name: '🚀 Potion ✨',
-                            farm: '🔮 Wizard trees 🔮',
-                            promoEligible: false,
-                            type: 'Weed',
-                            image: 'PotionProduct.jpg',
-                            video: 'VideoCali1.mp4',
-                            description: 'Batch 09/09/2025 \n ( Limelight x Blackmagic )',
-                            tarifs: [
-                                { weight: '3,5g', price: 130.00 },
-                                { weight: '7g', price: 250.00 },
-                                { weight: '10,5g', price: 350.00 },
-                            ]
-                        } */
-                    ]
                 }]
-        }
+        } */
     ];
 
     // --- VARIABLES D'ÉTAT ---
